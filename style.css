@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+}
+
+/* Header Bar and Nav Menu */
+
+.header_bar {
+    width: 100%;
+    height: 80px;
+    background-color: #2a5195;
+    box-shadow: 0 10px 30px #333333;
+    display: flex;
+    position: absolute;
+    z-index: 100;
+}
+
+.header_bar > div {
+    flex: 1;
+}
+
+.header_bar > div:nth-of-type(2) {
+    display: flex;
+    flex: 6;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_button {
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+    z-index: 20;
+}
+
+.header_nav {
+    background-color: #2a5195;
+    height: 100vh;
+    width: 20vw;
+    position: fixed;
+    left: -20vw;
+    top: 80px;
+    transition: all 1s;
+    z-index: 2;
+}
+
+.header_nav.active {
+    left: 0vw;
+    top: 80px;
+}
+
+li {
+    list-style-type: none;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20pt;
+    padding-top: 20px;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+}
+
+.header_logo {
+    height: 70px;
+    float: right;
+    padding: 5px 10px 5px 0px;
+}
+
+/* Main Content Styles */
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15pt;
+}
+
+#main {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 35px;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 40px;
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: 100;
+    padding-bottom: 10px;
+}
+
+h3 a {
+    color: green;
+}
+
+.page_title {
+    padding: 20px 10px 10px 10px;
+}
+
+.trip {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.summary {
+    padding: 10px;
+}
+
+footer {
+    width: 1200px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+/* Hero Image and Text Overlay */
+
+.hero_block {
+    color: white;
+    background: url('images/canoe.jpg') center/cover no-repeat;
+    width: 100%;
+    height: 675px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero_text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50pt;
+    color: white;
+    text-align: center;
+}
+
+/* Media Queries for Screens under 800px wide */
+
+@media only screen and (max-width:799px) {
+    .hero_block {
+        height: 425px;
+    }
+
+    body {
+        font-size: 12pt;
+    }
+    h1 {
+        font-size: 15px;
+    }
+   
+    h2 {
+        font-size: 30px;
+    }
+    
+    h3 {
+        font-size: 30px;
+    }
+
+    .hero_text {
+        font-size: 32pt;
+      }
+
+    li {
+        font-size: 12pt;
+    }
+
+    .header_nav {
+        width: 40vw;
+        left: -40vw;
+    }
+    
+    .header_nav.active {
+        left: 0vw;
+        top: 80px;
+    }
+}
